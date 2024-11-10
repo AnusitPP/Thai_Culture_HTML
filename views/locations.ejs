@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สถานที่โบราณคดีไทย</title>
+    <!-- ลิงก์ไฟล์ CSS หลักที่รวมทุกสไตล์ -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="locations-page">
+    <!-- Include Header -->
+    <%- include('partials/header') %>
+
+    <main>
+        <section class="places-section">
+            <h2>สถานที่โบราณคดีไทย</h2>
+            <div class="places-grid">
+                <!-- ข้อมูลสถานที่ต่างๆ -->
+                <div class="place-card">
+                    <img src="https://www.expedia.co.th/stories/wp-content/uploads/2022/07/1.%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A8%E0%B8%A3%E0%B8%B5%E0%B8%AA%E0%B8%A3%E0%B8%A3%E0%B9%80%E0%B8%9E%E0%B8%8A%E0%B8%8D%E0%B9%8C-2.jpg" alt="วัดพระศรีสรรเพชญ์">
+                    <h3>วัดพระศรีสรรเพชญ์<br>ต.ประตูชัย อ.พระนครศรีอยุธยา
+                      จ.พระนครศรีอยุธยา</h3>
+                    <button>เพิ่มเติม</button>
+                  </div>
+                  <div class="place-card">
+                    <img src="https://www.expedia.co.th/stories/wp-content/uploads/2022/07/1.%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9A%E0%B8%B9%E0%B8%A3%E0%B8%93%E0%B8%B0-3.jpg" alt="วัดราชบูรณะ">
+                    <h3>วัดราชบูรณะ<br>ต.ท่าวาสุกรี อ.พระนครศรีอยุธยา จ.พระนครศรีอยุธยา</h3>
+                    <button>เพิ่มเติม</button>
+                  </div>
+                  <div class="place-card">
+                    <img src="https://www.expedia.co.th/stories/wp-content/uploads/2022/07/1.%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%84%E0%B8%8A%E0%B8%A2%E0%B8%A7%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A1-4.jpg" alt="วัดไชยวัฒนาราม">
+                    <h3>วัดไชยวัฒนาราม<br>ต.บ้านป้อม อ.พระนครศรีอยุธยา  จ.พระนครศรีอยุธยา</h3>
+                    <button>เพิ่มเติม</button>
+                  </div>
+                  <div class="place-card">
+                    <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRaVPcoNMAp_YR880foW6Wbmx1yg21yQkLkGYPI58cm_WPHdrB5dYm_MapTUhznwMPLSXLrvWaI5V9XnBe1xmRgO9JfTyVm-xbkOF8nEA" alt="วัดศรีสวาย">
+                    <h3>วัดศรีสวาย<br>อุทยานประวัติศาสตร์สุโขทัย ต.เมืองเก่า อ.เมือง จ.สุโขทัย</h3>
+                    <button>เพิ่มเติม</button>
+                  </div>
+                  <div class="place-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Wat_Chang_Lom%2C_Si_Satchanalai_20231226_%28IV%29.jpg/640px-Wat_Chang_Lom%2C_Si_Satchanalai_20231226_%28IV%29.jpg" alt="อุทยาน์ศรีสัชนาลัย">
+                    <h3>อุทยาน์ศรีสัชนาลัย<br>ต.ศรีสัชนาลัย อ.ศรีสัชนาลัย จ.สุโขทัย</h3>
+                    <button>เพิ่มเติม</button>
+                  </div>
+                  <div class="place-card">
+                    <img src="https://img.kapook.com/u/2023/sutasinee/04/WatPhraKaew11.jpg" alt="วัดพระศรีรัตนศาสดาราม ">
+                    <h3>วัดพระศรีรัตนศาสดาราม <br>ต.พระบรมมหาราชวัง อ.พระนคร จ.กรุงเทพมหานคร </h3>
+                    <button>เพิ่มเติม</button>
+                  </div>
+                  <div class="place-card">
+                    <img src="https://www.silpa-mag.com/wp-content/uploads/2023/10/%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%9B%E0%B8%81-%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AA%E0%B8%B0%E0%B8%9E%E0%B8%B2%E0%B8%99%E0%B8%AB%E0%B8%B4%E0%B8%99.jpg" alt="วัดสะพานหิน">
+                    <h3>วัดสะพานหิน<br>โบราณสถานด้านทิศตะวันตก ต.เมืองเก่า อ.เมืองฯ จ.สุโขทัย</h3>
+                    <button>เพิ่มเติม</button>
+                  </div>
+                  <div class="place-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPaNjxyHYzkS9YJqUqWNeya790M3vSG7wc2A&s" alt="วัดมหาธาตุ">
+                    <h3>วัดมหาธาตุ<br>ต.ท่าวาสุกรี อ.พระนครศรีอยุธยา  จ.พระนครศรีอยุธยา</h3>
+                    <button>เพิ่มเติม</button>
+                  </div>
+                  <div class="place-card">
+                    <img src="https://npt.onab.go.th/th/file/get/file/202107210120a4f9196a5f9eb9f523f31f914da7175822.jpg" alt="ปฐมเจดีย์ ราชวรมหาวิหาร">
+                    <h3>ปฐมเจดีย์ ราชวรมหาวิหาร<br>ต.พระปฐมเจดีย์ อ.เมืองนครปฐม จ.นครปฐม</h3>
+                    <button>เพิ่มเติม</button>
+                  </div>
+                  <div class="place-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK-U2NiNtzGLQ2Qjz-iLEu6cPEPD5QdDztWQ&s" alt="อุทยาน์พิมาย">
+                    <h3>อุทยาน์พิมาย<br>ต.ในเมือง อ.พิมาย จ.นครราชสีมา</h3>
+                    <button>เพิ่มเติม</button>
+                  </div>
+                  <div class="place-card">
+                    <img src="https://f.ptcdn.info/985/079/000/rqxjs7myd8LvPxSj60aL-o.jpg" alt="ปราสาทพนมรุ้ง">
+                    <h3>ปราสาทพนมรุ้ง<br>อุทยานประวัติศาสตร์พนมรุ้ง  อ.เฉลิมพระเกียรติ จ.บุรีรัมย์</h3>
+                    <button>เพิ่มเติม</button>
+                  </div>
+                  <div class="place-card">
+                    <img src="https://www.museumthailand.com/upload/evidence/1504185211_68611.jpg" alt="วัดไชยวัฒนาราม">
+                    <h3>วัดไชยวัฒนาราม<br>ต.เมืองสิงห์ อ.ไทรโยค จ.กาญจนบุรี</h3>
+                    <button>เพิ่มเติม</button>
+                  </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer -->
+    <%- include('partials/footer') %>
+</body>
+</html>

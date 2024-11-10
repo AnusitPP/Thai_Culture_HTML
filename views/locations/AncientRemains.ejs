@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= arId.name %></title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap">
+    <link rel="stylesheet" href="/AncientRemains.css">
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <div class="ar-container">
+        <div class="image-section">
+            <img src="<%= arId.image_url %>" alt="<%= arId.name %>">
+        </div>
+        <form action="/locations/edit/<%= arId.id %>" method="POST" class="info-section">
+            <label for="imageUrl">ลิงก์รูปภาพ</label>
+            <input type="text" id="imageUrl" name="image_url" value="<%= arId.image_url %>">
+
+            <label for="placeName">ชื่อสถานที่</label>
+            <input type="text" id="placeName" name="name" value="<%= arId.name %>" required>
+
+            <label for="description">รายละเอียด</label>
+            <textarea id="description" name="description" rows="4" required><%= arId.description %></textarea>
+
+            <label for="location">ที่อยู่</label>
+            <input type="text" id="location" name="location" value="<%= arId.location %>" required>
+
+            <div class="form-buttons">
+                <button type="button" class="cancel-button" onclick="window.history.back()">ยกเลิก</button>
+                <button type="submit" class="submit-button">ยืนยัน</button>
+            </div>
+        </form>
+    </div>
+    <%- include('../partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สถานที่โบราณคดีไทย</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap">
+    <link rel="stylesheet" href="../locations.css">
+</head>
+<body class="locations-page">
+    <!-- Include Header -->
+    <%- include('../partials/header') %>
+
+    <main>
+        <section class="places-section">
+            <h2>สถานที่โบราณคดีไทย</h2>
+
+            <!-- ปุ่มเพิ่มสถานที่ใหม่ -->
+            <div class="actions">
+                <a href="/locations/add-location">
+                    <button class="add-button">เพิ่มสถานที่ใหม่</button>
+                </a>                                
+            </div>
+
+            <div class="places-grid">
+                <!-- ข้อมูลสถานที่ต่างๆ -->
+                <% locations.forEach(location => { %>
+                    <div class="place-card">
+                        <img src="<%= location.image_url %>" alt="<%= location.name %>">
+                        <h3><%= location.name %><br><%= location.description %></h3>
+                        
+                        <!-- ปุ่มดูรายละเอียด -->
+                        <a href="/locations/<%= location.id %>">
+                            <button>ดูรายละเอียด</button>
+                        </a>
+
+                        <!-- ปุ่มลบ ใช้ form เพื่อส่ง POST request -->
+                        <form action="/locations/delete/<%= location.id %>" method="POST" style="display:inline;">
+                            <button type="submit" class="delete-button" onclick="return confirm('คุณแน่ใจว่าต้องการลบสถานที่นี้?');">ลบ</button>
+                        </form>
+                    </div>
+                <% }); %>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer -->
+    <%- include('../partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/css/header.css">
+
+<header class="header">
+    <div class="header-container">
+        <h1 class="header-left" style="font-family: Charm;">เสน่ห์แห่งศิลป์สยาม</h1>
+        <nav class="header-nav">
+            <ul class="nav-list">
+                <li><a href="/">หน้าหลัก</a></li>
+                <li><a href="/locations">สถานที่โบราณคดีไทย</a></li>
+                <li><a href="/zone/southern">ประเพณีและวัฒนธรรมไทย</a></li>
+                <li><a href="/contact">ติดต่อเรา</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <div class="language-dropdown">
+                <button class="dropdown-button">TH</button>
+                <div class="dropdown-content">
+                    <a href="?lang=th">TH</a>
+                    <a href="?lang=en">EN</a>
+                </div>
+            </div>
+            
+            <% if (user) { %> 
+                <!-- ถ้ามีข้อมูลผู้ใช้ในเซสชั่น แสดงปุ่มออกจากระบบ -->
+                <form action="/logout" method="POST" style="display:inline;">
+                    <button type="submit" class="logout-button">ออกจากระบบ</button>
+                </form>
+            <% } else { %>
+                <!-- ถ้ายังไม่มีผู้ใช้ในเซสชั่น แสดงปุ่มเข้าสู่ระบบ -->
+                <a href="/login" class="login-button">เข้าสู่ระบบ</a>
+            <% } %>
+        </div>
+    </div>
+</header>

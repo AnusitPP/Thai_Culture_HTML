@@ -1,0 +1,198 @@
+/* Header Styles */
+header {
+    background-color: #ffffff;
+    color: #333;
+    padding: 10px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Charm', cursive;
+}
+
+.header {
+    background-color: #1f2937;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0 2rem;
+}
+
+.header-left {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+.header-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-nav .nav-list {
+    display: flex;
+    list-style-type: none;
+    gap: 3rem;
+    white-space: nowrap;
+}
+
+.header-nav .nav-list a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.header-nav .nav-list a:hover {
+    color: #fbbf24;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+/* สไตล์สำหรับปุ่ม login และ logout ที่ใช้กรอบขาว */
+.login-button, .logout-button {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: 2px solid #ffffff; /* กรอบขาว */
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-button:hover, .logout-button:hover {
+    background-color: #ffffff;
+    color: #1f2937;
+}
+
+
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: 2px solid #ffffff;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-button:hover {
+    background-color: #ffffff;
+    color: #1f2937;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f1f1f1;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #e2e8f0;
+}
+
+.language-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* -------------------------- Language Dropdown Styles - ใช้ร่วมกับทุกหน้า -------------------------- */
+.language-selector {
+    position: relative;
+}
+
+.lang-btn {
+    background-color: #2a3b4c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.lang-btn:hover {
+    background-color: #1e2b38;
+}
+
+.arrow {
+    margin-left: 5px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    transform: rotate(45deg);
+}
+
+.arrow.down {
+    transform: rotate(45deg);
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown a:hover {
+    background-color: #0073e6;
+    color: #ffffff;
+}
+
+.show {
+    display: block;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= tradition.name %></title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap">
+    <link rel="stylesheet" href="/AncientRemains.css">
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <div class="ar-container">
+        <div class="image-section">
+            <img src="<%= tradition.image_url %>" alt="<%= tradition.name %>">
+        </div>
+        <form action="/zone/<%= tradition.region %>/edit/<%= tradition.id %>" method="POST" class="info-section">
+            <label for="imageUrl">ลิงก์รูปภาพ</label>
+            <input type="text" id="imageUrl" name="image_url" value="<%= tradition.image_url %>">
+
+            <label for="placeName">ชื่อ</label>
+            <input type="text" id="placeName" name="name" value="<%= tradition.name %>" required>
+
+            <label for="description">รายละเอียด</label>
+            <textarea id="description" name="description" rows="4" required><%= tradition.description %></textarea>
+
+            <div class="form-buttons">
+                <button type="button" class="cancel-button" onclick="window.history.back()">ยกเลิก</button>
+                <button type="submit" class="submit-button">ยืนยัน</button>
+            </div>
+        </form>
+    </div>
+    <%- include('../partials/footer') %>
+</body>
+</html>

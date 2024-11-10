@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เพิ่มข้อมูลประเพณีใหม่ - <%= region %></title>
+    <link rel="stylesheet" href="/AncientRemains.css">
+</head>
+<body>
+    <%- include('../partials/header') %>
+    
+    <div class="ar-container">
+        <h2>เพิ่มข้อมูลประเพณีใหม่</h2>
+        <form action="/zone/add" method="POST" class="info-section">
+            <!-- Dropdown สำหรับเลือกภูมิภาค -->
+            <label for="region">เลือกภูมิภาค</label>
+            <select id="region" name="region" required>
+                <option value="south">ภาคใต้</option>
+                <option value="central">ภาคกลาง</option>
+                <option value="eastern">ภาคอีสาน</option>
+                <option value="north">ภาคเหนือ</option>
+            </select>
+
+            <label for="name">ชื่อประเพณี</label>
+            <input type="text" id="name" name="name" placeholder="ใส่ชื่อประเพณี" required>
+
+            <label for="details">รายละเอียด</label>
+            <textarea id="details" name="description" rows="6" placeholder="ใส่รายละเอียด" required></textarea>
+
+            <label for="image_url">ลิงก์รูปภาพ</label>
+            <input type="text" id="image_url" name="image_url" placeholder="ใส่ลิงก์รูปภาพ" required>
+
+            <div class="form-buttons">
+                <button type="button" class="cancel-button" onclick="window.history.back()">ยกเลิก</button>
+                <button type="submit" class="submit-button">บันทึก</button>
+            </div>
+        </form>
+    </div>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>

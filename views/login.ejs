@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap">
+    <link rel="stylesheet" href="/login.css">
+    <title>เข้าสู่ระบบ</title>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h1>เข้าสู่ระบบ</h1>
+        </div>
+        <form action="/login" method="post" class="login-box">
+            <input type="email" name="email" placeholder="อีเมล" required>
+            <input type="password" name="password" placeholder="รหัสผ่าน" required>
+            <div class="remember-me">
+                <input type="checkbox" name="remember" id="remember">
+                <label for="remember" style="font-size: 120%;">จดจำการเข้าสู่ระบบ</label>
+                <div class="forgot-password">
+                    <a href="/forgot-password" class="forgot-password" style="font-size: 120%;">ลืมรหัสผ่าน</a>
+                </div>
+            </div>
+            <button type="submit" class="login-button">เข้าสู่ระบบ</button>
+            <div class="or-separator">หรือ</div>
+            <button type="button" class="google-login">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1200px-Google_%22G%22_logo.svg.png"
+                    alt="Google Logo"> เข้าสู่ระบบ ด้วย Google
+            </button>
+        </form>
+        <a href="/register" class="signup-link" style="font-size: 120%;">หากยังไม่มีบัญชี คลิกสมัครสมาชิก</a>
+    </div>
+</body>
+
+</html>

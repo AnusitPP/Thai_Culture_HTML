@@ -1,0 +1,101 @@
+create database culture
+
+CREATE TABLE AncientRemains (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    image_url VARCHAR(255),
+    location VARCHAR(255)
+);
+
+INSERT INTO AncientRemains (name, description, image_url, location) VALUES
+('วัดพระศรีสรรเพชญ์', 'ต.ประตูชัย อ.พระนครศรีอยุธยา จ.พระนครศรีอยุธยา', 'https://www.expedia.co.th/stories/wp-content/uploads/2022/07/1.%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A8%E0%B8%A3%E0%B8%B5%E0%B8%AA%E0%B8%A3%E0%B8%A3%E0%B9%80%E0%B8%9E%E0%B8%8A%E0%B8%8D%E0%B9%8C-2.jpg', 'อยุธยา'),
+('วัดราชบูรณะ', 'ต.ท่าวาสุกรี อ.พระนครศรีอยุธยา จ.พระนครศรีอยุธยา', 'https://www.expedia.co.th/stories/wp-content/uploads/2022/07/1.%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9A%E0%B8%B9%E0%B8%A3%E0%B8%93%E0%B8%B0-3.jpg', 'อยุธยา'),
+('วัดไชยวัฒนาราม', 'ต.บ้านป้อม อ.พระนครศรีอยุธยา จ.พระนครศรีอยุธยา', 'https://www.expedia.co.th/stories/wp-content/uploads/2022/07/1.%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%84%E0%B8%8A%E0%B8%A2%E0%B8%A7%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A1-4.jpg', 'อยุธยา'),
+('วัดศรีสวาย', 'อุทยานประวัติศาสตร์สุโขทัย ต.เมืองเก่า อ.เมือง จ.สุโขทัย', 'https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRaVPcoNMAp_YR880foW6Wbmx1yg21yQkLkGYPI58cm_WPHdrB5dYm_MapTUhznwMPLSXLrvWaI5V9XnBe1xmRgO9JfTyVm-xbkOF8nEA', 'สุโขทัย'),
+('อุทยาน์ศรีสัชนาลัย', 'ต.ศรีสัชนาลัย อ.ศรีสัชนาลัย จ.สุโขทัย', 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Wat_Chang_Lom%2C_Si_Satchanalai_20231226_%28IV%29.jpg/640px-Wat_Chang_Lom%2C_Si_Satchanalai_20231226_%28IV%29.jpg', 'สุโขทัย'),
+('วัดพระศรีรัตนศาสดาราม', 'ต.พระบรมมหาราชวัง อ.พระนคร จ.กรุงเทพมหานคร', 'https://img.kapook.com/u/2023/sutasinee/04/WatPhraKaew11.jpg', 'กรุงเทพมหานคร'),
+('วัดสะพานหิน', 'โบราณสถานด้านทิศตะวันตก ต.เมืองเก่า อ.เมืองฯ จ.สุโขทัย', 'https://www.silpa-mag.com/wp-content/uploads/2023/10/%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%9B%E0%B8%81-%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AA%E0%B8%B0%E0%B8%9E%E0%B8%B2%E0%B8%99%E0%B8%AB%E0%B8%B4%E0%B8%99.jpg', 'สุโขทัย'),
+('วัดมหาธาตุ', 'ต.ท่าวาสุกรี อ.พระนครศรีอยุธยา จ.พระนครศรีอยุธยา', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPaNjxyHYzkS9YJqUqWNeya790M3vSG7wc2A&s', 'อยุธยา'),
+('ปฐมเจดีย์ ราชวรมหาวิหาร', 'ต.พระปฐมเจดีย์ อ.เมืองนครปฐม จ.นครปฐม', 'https://npt.onab.go.th/th/file/get/file/202107210120a4f9196a5f9eb9f523f31f914da7175822.jpg', 'นครปฐม'),
+('อุทยาน์พิมาย', 'ต.ในเมือง อ.พิมาย จ.นครราชสีมา', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK-U2NiNtzGLQ2Qjz-iLEu6cPEPD5QdDztWQ&s', 'นครราชสีมา'),
+('ปราสาทพนมรุ้ง', 'อุทยานประวัติศาสตร์พนมรุ้ง อ.เฉลิมพระเกียรติ จ.บุรีรัมย์', 'https://f.ptcdn.info/985/079/000/rqxjs7myd8LvPxSj60aL-o.jpg', 'บุรีรัมย์'),
+('วัดไชยวัฒนาราม', 'ต.เมืองสิงห์ อ.ไทรโยค จ.กาญจนบุรี', 'https://www.museumthailand.com/upload/evidence/1504185211_68611.jpg', 'กาญจนบุรี');
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    phone VARCHAR(15),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE CulturalTraditions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    region VARCHAR(50),        -- ภูมิภาค (เช่น central, northern, eastern, southern)
+    name VARCHAR(100),         -- ชื่อประเพณี
+    description TEXT,          -- คำอธิบายประเพณี
+    details TEXT,              -- รายละเอียดเพิ่มเติมเกี่ยวกับประเพณี
+    image_url VARCHAR(255)     -- URL รูปภาพ
+);
+
+INSERT INTO CulturalTraditions (name, description, image_url, region)
+VALUES 
+-- ภาคใต้
+('ประเพณีชิงเปรต', 'ประเพณีชิงเปรตเป็นหนึ่งในประเพณีท้องถิ่นภาคใต้...', 'https://today-obs.line-scdn.net/0ht9lVY5XfKxZRLwI9hHJUQWt5KHliQzgVNRl6FQ1BdSIrGj4VZEg0I319fCAsSGxIPx5sdnIvMCcuFmUXOR40/w1200', 'south'),
+('ประเพณีแห่พระสงกรานต์', 'ประเพณีแห่พระสงกรานต์จัดขึ้นที่จังหวัดนครศรีธรรมราช...', 'https://www.nairobroo.com/wp-content/uploads/2019/03/%E0%B9%81%E0%B8%82%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%82%E0%B8%B6%E0%B9%89%E0%B8%99%E0%B9%82%E0%B8%82%E0%B8%99%E0%B8%8A%E0%B8%B4%E0%B8%87%E0%B8%98%E0%B8%87-5.jpg', 'south'),
+('ประเพณีลอยกระทง', 'ประเพณีลอยกระทงเป็นประเพณีที่จัดขึ้นในช่วงวันเพ็ญเดือน 12...', 'https://www.suratcity.go.th/web/components/com_flexicontent/uploads/110-1.jpg', 'south'),
+
+-- ภาคกลาง
+('ประเพณีโยนบัว', 'ประเพณีโยนบัวเป็นการแสดงความเคารพและสักการะองค์พระมหาธาตุ...', 'https://tatapi.tourismthailand.org/tatfs/IMAGE/Event/Picture/E0002303.jpg', 'central'),
+('ประเพณีตักบาตรเทโว', 'ประเพณีตักบาตรเทโวเป็นการทำบุญเพื่อถวายเป็นพุทธบูชา...', 'https://www.dhammathai.org/day/pic/takbatthewo.jpg', 'central'),
+('ประเพณีกวนข้าวทิพย์', 'ประเพณีกวนข้าวทิพย์เป็นประเพณีที่มีการกวนข้าวทิพย์เพื่อถวายพระ...', 'https://www.museumthailand.com/upload/evidence/1565332952_34616.jpg', 'central'),
+
+-- ภาคเหนือ
+('ประเพณีอุ้มพระดำน้ำ', 'ประเพณีอุ้มพระดำน้ำจัดขึ้นที่จังหวัดเพชรบูรณ์...', 'http://hotelandresortthailand.com/read/wp-content/uploads/2020/08/1-4-1600x1066.jpg', 'north'),
+('ประเพณีตางตุง', 'ประเพณีตางตุงเป็นประเพณีที่มีมาอย่างยาวนาน...', 'https://img.kapook.com/u/2018/sutasinee/08/h1.jpg', 'north'),
+('ประเพณียี่เป็ง', 'ประเพณียี่เป็งเป็นเทศกาลลอยกระทงล้านนา...', 'https://www.govivigo.com/content/ideas/5633/56339a3dec60adb92a8b4628-2-full-ideas.jpg', 'north'),
+
+-- ภาคอีสาน
+('ประเพณีบุญบั้งไฟ', 'ประเพณีบุญบั้งไฟเป็นการบูชาสิ่งศักดิ์สิทธิ์...', 'https://img.kapook.com/u/panadda/Visun-Khankasemcover.jpg', 'eastern'),
+('ประเพณีผีตาโขน', 'ประเพณีผีตาโขนเป็นเทศกาลที่มีชื่อเสียงในจังหวัดเลย...', 'https://cms.dmpcdn.com/travel/2021/06/09/3722c7d0-c8ee-11eb-9103-ffb559e11b07_original.jpg', 'eastern'),
+('ประเพณีแห่เทียนพรรษา', 'ประเพณีแห่เทียนพรรษาจัดขึ้นในจังหวัดอุบลราชธานี...', 'https://tatapi.tourismthailand.org/tatfs/IMAGE/Event/Picture/E0002303.jpg', 'eastern');
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    lastname VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO users (username, lastname, email, password, phone) VALUES
+('Anusit', 'Panpimsen', '654234040@parichat.skru.ac.th', '$2b$10$lH37aWGpEPPr3Z9F3dE1LO5PI5Zo6GYe9j1WApd8/CDv7WQ2g45Uu', '0856549874'),
+('Apiwat', 'Naemsai', '654234012@parichat.skru.ac.th', '$2b$10$lH37aWGpEPPr3Z9F3dE1LO5PI5Zo6GYe9j1WApd8/CDv7WQ2g45Uu', '0641485194'),
+('Lookman', 'Boontang', '654234038@parichat.skru.ac.th', '$2b$10$lH37aWGpEPPr3Z9F3dE1LO5PI5Zo6GYe9j1WApd8/CDv7WQ2g45Uu', '0630787104'),
+('Kritsanapong', 'Bunpradit', '654234023@parichat.skru.ac.th', '$2b$10$lH37aWGpEPPr3Z9F3dE1LO5PI5Zo6GYe9j1WApd8/CDv7WQ2g45Uu', '0944860221'),
+('Erhan', 'Mamat', '654234015@parichat.skru.ac.th', '$2b$10$lH37aWGpEPPr3Z9F3dE1LO5PI5Zo6GYe9j1WApd8/CDv7WQ2g45Uu', '0936279294'),
+('Firnan', 'Chehama', '654234009@parichat.skru.ac.th', '$2b$10$lH37aWGpEPPr3Z9F3dE1LO5PI5Zo6GYe9j1WApd8/CDv7WQ2g45Uu', '0838235316'),
+('Peerapol', 'Muslimeen', '654234008@parichat.skru.ac.th', '$2b$10$lH37aWGpEPPr3Z9F3dE1LO5PI5Zo6GYe9j1WApd8/CDv7WQ2g45Uu', '0801209657');
+
+CREATE TABLE IF NOT EXISTS ContactMessages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    contactType VARCHAR(255) NOT NULL,
+    fullname VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO ContactMessages (fullname, email, phone, message, contactType) VALUES
+('Anusit Panpimsen', '654234040@parichat.skru.ac.th', '0856549874', 'เป็นเว็บที่ดี', 'ทั่วไป'),
+('Apiwat Naemsai', '654234012@parichat.skru.ac.th', '0641485194', 'Jesus! เว็บนี้ใช้งานได้ดีมาก', 'ทั่วไป'),
+('Lookman Boontang', '654234038@parichat.skru.ac.th', '0630787104', 'hello peter!', 'คำถามเกี่ยวกับบริการ'),
+('Kritsanapong Bunpradit', '654234023@parichat.skru.ac.th', '0944860221', 'Hi bro!', 'ความคิดเห็น'),
+('Erhan', '654234015@parichat.skru.ac.th', '0936279294', 'Salam', 'ทั่วไป'),
+('Firnan', '654234009@parichat.skru.ac.th', '0838235316', 'Welcome', 'คำถามเกี่ยวกับบริการ'),
+('Peerapol Muslimeen', '654234008@parichat.skru.ac.th', '0801209657', 'salamat pagi', 'ความคิดเห็น');

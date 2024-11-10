@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap">
+    <link rel="stylesheet" href="/register.css">
+    <title>สมัครสมาชิก</title>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h1>สมัครสมาชิก</h1>
+        </div>
+        <form action="/register" method="post" class="login-box">
+            <input type="text" name="username" placeholder="ชื่อ" required>
+            <input type="text" name="lastname" placeholder="นามสกุล" required>
+            <input type="email" name="email" placeholder="อีเมล" required>
+            <input type="password" name="password" placeholder="รหัสผ่าน" required>
+            <input type="password" name="confirm_password" placeholder="ยืนยันรหัสผ่าน" required>
+            <input type="tel" name="phone" placeholder="เบอร์โทรศัพท์" required>
+            <button type="submit" class="login-button">สมัครสมาชิก</button>
+        </form>        
+        <a href="/login" class="signup-link" style="font-size: 120%;">หากมีบัญชีอยู่แล้ว คลิกเข้าสู่ระบบ</a>
+    </div>
+</body>
+
+</html>

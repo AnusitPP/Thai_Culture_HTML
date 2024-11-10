@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประเพณีและวัฒนธรรมไทย </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap">
+    <link rel="stylesheet" href="/zone.css">
+</head>
+<body class="index-page">
+    <%- include('../partials/header') %>
+    <section class="index-hero">
+        <h2>วัฒนธรรมและประเพณีไทย</h2>
+        <div class="tabs">
+            <a href="/zone/south"><button class="tab <%= region === 'ภาคใต้' ? 'active' : '' %>">ภาคใต้</button></a>
+            <a href="/zone/central"><button class="tab <%= region === 'ภาคกลาง' ? 'active' : '' %>">ภาคกลาง</button></a>
+            <a href="/zone/eastern"><button class="tab <%= region === 'ภาคอีสาน' ? 'active' : '' %>">ภาคอีสาน</button></a>
+            <a href="/zone/north"><button class="tab <%= region === 'ภาคเหนือ' ? 'active' : '' %>">ภาคเหนือ</button></a>
+        </div>   
+        
+        <div class="add-button-container">
+            <a href="/zone/<%= region === 'ภาคใต้' ? 'south' : region === 'ภาคกลาง' ? 'central' : region === 'ภาคอีสาน' ? 'eastern' : 'north' %>/add">
+                <button class="add-button">เพิ่มข้อมูลวัฒนธรรมและประเพณีใหม่</button>
+            </a>
+        </div>
+                
+        <div class="culture-cards">
+            <% traditions.forEach(tradition => { %>
+                <div class="card">
+                    <img src="<%= tradition.image_url %>" alt="<%= tradition.name %>">
+                    <h3><%= tradition.name %></h3>
+                    <p><%= tradition.description %></p>
+                    <div class="buttons-container">
+                        <a href="/zone/<%= tradition.region %>/details/<%= tradition.id %>">
+                            <button class="view-more">ดูรายละเอียด</button>
+                        </a>
+                        <form action="/zone/<%= tradition.region %>/delete/<%= tradition.id %>" method="POST" style="display:inline;">
+                            <button type="submit" class="delete-button" onclick="return confirm('คุณแน่ใจว่าต้องการลบประเพณีนี้?');">ลบ</button>
+                        </form>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </section>
+    <%- include('../partials/footer') %>
+</body>
+</html>

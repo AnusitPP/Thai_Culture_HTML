@@ -1,0 +1,81 @@
+.contact-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 50px;
+    gap: 50px;
+}
+
+.contact-info {
+    max-width: 400px;
+}
+
+.contact-info h2 {
+    color: #d9534f;
+    font-size: 300%;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 220%;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+.contact-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-submit {
+    background-color: #1f2937; /* สีพื้นหลังเริ่มต้น */
+    color: #ffffff; /* สีของตัวอักษรเริ่มต้น */
+    padding: 0.75rem 1.5rem; /* เพิ่มความหนาและความยาวของ padding เพื่อให้ปุ่มดูเด่นขึ้น */
+    border: 2px solid #ffffff; /* กรอบสีขาว */
+    border-radius: 8px; /* ทำให้มุมของปุ่มโค้งมนขึ้นเพื่อความนุ่มนวล */
+    text-decoration: none;
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงแบบ smooth ครอบคลุมทุกคุณสมบัติ */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold; /* เพิ่มความหนาให้ตัวอักษรเพื่อให้เด่นขึ้น */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ปุ่มดูมีมิติ */
+    cursor: pointer; /* แสดง cursor เป็น pointer เมื่อ hover */
+}
+
+.btn-submit:hover {
+    background-color: #ffffff; /* เปลี่ยนสีพื้นหลังเป็นสีขาวเมื่อ hover */
+    color: #1f2937; /* เปลี่ยนสีตัวอักษรเป็นสีเทาเข้มเมื่อ hover */
+    border: 2px solid #1f2937; /* เปลี่ยนสีของกรอบเป็นสีเทาเข้มเมื่อ hover */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2); /* เพิ่มขนาดและความเข้มของเงาเมื่อ hover */
+    transform: translateY(-2px); /* ยกปุ่มขึ้นเล็กน้อยเมื่อ hover เพื่อเพิ่มความรู้สึกตอบสนอง */
+}
+

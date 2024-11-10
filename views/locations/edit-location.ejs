@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แก้ไขสถานที่</title>
+</head>
+<body>
+    <h1>แก้ไขสถานที่</h1>
+    <form action="/locations/edit/<%= location.id %>" method="POST">
+        <label>ชื่อสถานที่</label>
+        <input type="text" name="name" value="<%= location.name %>" required>
+
+        <label>รายละเอียด</label>
+        <textarea name="description" required><%= location.description %></textarea>
+
+        <label>ลิงก์รูปภาพ</label>
+        <input type="text" name="image_url" value="<%= location.image_url %>" required>
+
+        <button type="submit">บันทึก</button>
+    </form>
+</body>
+</html>
